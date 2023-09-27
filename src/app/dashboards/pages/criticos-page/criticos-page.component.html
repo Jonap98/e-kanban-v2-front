@@ -1,0 +1,48 @@
+<div class="d-flex">
+
+  <div
+    *ngFor="let ruta of rutasList"
+    class="col">
+    <h1 class="header-text">{{ ruta.ruta }}: <b>{{ ruta.cantidad }}</b> </h1>
+    <button class="btn " style="background-color: {{ ruta.color }};"></button>
+  </div>
+
+</div>
+
+<hr>
+
+<div class="row">
+
+  <div
+    *ngFor="let column of colsList; index as i"
+    class="col">
+
+    <div class="col d-flex justify-content-evenly">
+      <h5>Ruta</h5>
+      <h5>.</h5>
+      <h5>Número de parte</h5>
+      <h5>Fecha</h5>
+      <h5>Cantidad pendiente</h5>
+    </div>
+
+    <div
+      *ngFor="let critico of column; index as i"
+      class="mt-4 ps-2 secondary-card" style="background-color: {{ critico.color.color }}; color: #fff">
+      <div class="row row-element">
+        <div class="secondary-text col-2 d-flex justify-content-start align-items-center">
+          <span class="ms-4">{{ critico.ruta }}</span>
+        </div>
+
+        <div class="col d-flex justify-content-evenly">
+
+          <h4 class="text-content">{{ critico.parte }}</h4>
+          <h5 class="text-content">{{ critico.fecha }}</h5>
+          <h5 class="text-content">{{ critico.cantidad_pendiente }}</h5>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

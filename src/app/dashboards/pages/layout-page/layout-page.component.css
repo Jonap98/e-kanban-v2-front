@@ -1,0 +1,16 @@
+.navbar {
+  background-color: #011429;
+}
+
+.main-content {
+  background-color: #f2efed;
+  /* height: 100%; */
+  height: 100vh;
+  padding: 2rem;
+}
+
+h1 {
+  color: #fff;
+}
+
+
